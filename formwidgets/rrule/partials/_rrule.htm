@@ -90,7 +90,7 @@
 <!-- Ends -->
     <div class="row<?= (array_get($f, 'FREQ', 'NONE') == 'NONE' ? ' hidden' : '') ?> r_all r_hourly r_daily r_weekdays r_weekends r_weekly r_monthly r_yearly r_series form-inline">
         <div class="col-md-5 form-group">
-            <?= Form::label('Ends', 'Ends',['class'=>'control-label']) ?>
+            <?= Form::label('Ends', $this->t('ENDON') ,['class'=>'control-label']) ?>
             <?= Form::select('Ends', ['NEVER' => $this->t('Never').$this->maxCount().$this->t('Never_end'), 'AFTER' => $this->t('After'), 'DATE' => $this->t('On_date')], array_get($f, 'Ends'), ['class' => 'form-control custom-select  r_all r_hourly r_daily r_weekdays r_weekends r_weekly r_monthly r_yearly r_series', 'style'=>'width:80%;']) ?>
         </div>
 
